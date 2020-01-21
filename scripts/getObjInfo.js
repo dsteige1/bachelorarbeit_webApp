@@ -186,7 +186,7 @@ function getObjInfo(myvar)
 function displayDetails(objIndex)
 {
 	//window.alert(myData.datenbank.object[objIndex].title);
-	$("#ContentContainer").toggle();
+	//$("#ContentContainer").toggle();
 
 	$("#infoTitle").text(myData.datenbank.object[objIndex].title);
 	$("#infoContent").text(myData.datenbank.object[objIndex].content);

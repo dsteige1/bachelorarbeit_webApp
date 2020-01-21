@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Domkrypta Virtuell</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -13,8 +13,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="scripts/ajaxLoader.js"></script>
 <script src="scripts/getObjInfo.js"></script>
+<script src="scripts/anchorCall.js"></script>
 <script>
-  var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Crypt_TestBuild_01-18.json", {onProgress: UnityProgress});
+    var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Crypt_TestBuild_01-21.json", { onProgress: UnityProgress });
 </script>
 
 <body>
@@ -25,9 +26,9 @@
             <a href="#home" class="w3-bar-item w3-button w3-wide">HOME</a>
             <!-- Right-sided navbar links -->
             <div class="w3-right w3-hide-small">
-                <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-graduation-cap"></i> DAS PROJEKT</a>
+                <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-cubes"></i> DAS PROJEKT</a>
                 <a href="#anleitung" class="w3-bar-item w3-button"><i class="fa fa-book"></i> ANLEITUNG</a>
-                <a href="#app" class="w3-bar-item w3-button"><i class="fa fa-gamepad"></i> ZUM SPIEL</a>
+                <a href="#app" class="w3-bar-item w3-button"><i class="fa fa-gamepad"></i> ZUR KRYPTA</a>
             </div>
             <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -45,7 +46,7 @@
             ×</a>
         <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
         <a href="#anleitung" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-        <a href="#app" onclick="w3_close()" class="w3-bar-item w3-button">ZUM SPIEL</a>
+        <a href="#app" onclick="w3_close()" class="w3-bar-item w3-button">ZUR KRYPTA</a>
     </nav>
 
     <!-- Header with full-height image -->
@@ -55,7 +56,8 @@
             <span class="w3-xxlarge w3-hide-large w3-hide-medium">Domkrypta virtuell</span><br>
             <span class="w3-large">Eine interaktive, virtuelle Umgebung</span>
             <p><a href="#about"
-                    class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">ABOUT</a></p>
+                    class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">ABOUT</a>
+            </p>
         </div>
     </header>
 
@@ -82,14 +84,17 @@
                 <h3>Anleitung</h3>
                 <p>Sich in der virtuellen Krypta zu bewegen geht folgendermaßen:</p>
                 <p>Bewegen Sie die Maus in die Richtung, in die Sie Blicken, oder in die sie sich bewegen möchten.</p>
-                <p>Mit den Tasten <kbd>w</kbd>, <kbd>a</kbd>, <kbd>s</kbd> und <kbd>d</kbd> 
-                    können Sie sich nach vorne, links, rechts und rückwärts bewegen. Alternativ Können sie auch die Pfeiltasten verwenden.
+                <p>Mit den Tasten <kbd>w</kbd>, <kbd>a</kbd>, <kbd>s</kbd> und <kbd>d</kbd>
+                    können Sie sich nach vorne, links, rechts und rückwärts bewegen. Alternativ Können sie auch die
+                    Pfeiltasten verwenden.
                 </p>
                 <p>Um mit Objekten zu interagieren, drücken Sie die <kbd>Space</kbd>-Taste.
-                    <br> 
-                    Dies bewirkt, dass die Maus sichtbar wird und Sie über Objekte fahren, oder auch auf diese Klicken können.
                     <br>
-                    Um sich weiter im Raum zu bewegen, betätigen Sie erneut die <kbd>Space</kbd>-Taste und die Maus wird wieder unsichtbar.
+                    Dies bewirkt, dass die Maus sichtbar wird und Sie über Objekte fahren, oder auch auf diese Klicken
+                    können.
+                    <br>
+                    Um sich weiter im Raum zu bewegen, betätigen Sie erneut die <kbd>Space</kbd>-Taste und die Maus wird
+                    wieder unsichtbar.
                 </p>
             </div>
             <div class="w3-col m6">
@@ -100,21 +105,23 @@
     </div>
 
     <!-- THE GAME -->
-    <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64" id="app">
-        <h1>Hier erscheint die App</h1>
-        <div class="w3-col s9">
+    <div class="w3-container w3-row-padding w3-center w3-dark-grey w3-padding-64" id="app">
+        <h1>Die virtuelle Domkrypta</h1>
+        <div class="w3-col m9">
             <div class="webgl-content">
-                <div id="unityContainer" style="width: 960px; height: 600px"></div>
+                <div class="content-wrapper">
+                    <div id="unityContainer"></div>
+                </div>
                 <div class="footer">
-                <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+                    <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
                 </div>
             </div>
         </div>
-        <div class="w3-col s2 w3-card w3-margin-30" id="ContentContainer">
+        <div class="w3-col m3 w3-card w3-margin-30" id="ContentContainer">
             <div class="w3-container">
-            <h3 id="infoTitle">Hier kommt die Info-Überschrift</h3>
-            <p id="infoContent">Hier der Content</p>
-        </div>
+                <h3 id="infoTitle">Hier kommt die Info-Überschrift</h3>
+                <p id="infoContent">Hier der Content</p>
+            </div>
         </div>
     </div>
 
@@ -122,8 +129,9 @@
     <footer class="w3-center w3-black w3-padding-64">
         <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
         <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
-                class="w3-hover-text-green">w3.css</a> | 
-                <a href="https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_startup" class="w3-hover-text-green">Startup Template</a>
+                class="w3-hover-text-green">w3.css</a> |
+            <a href="https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_startup"
+                class="w3-hover-text-green">Startup Template</a>
         </p>
     </footer>
 
@@ -142,6 +150,15 @@
         // Close the sidebar with the close button
         function w3_close() {
             mySidebar.style.display = "none";
+        }
+    </script>
+    <script>
+        //Detect Browsers, in order give alert if Browser is compatible with the App
+        var isChrome = window.chrome;
+        var isFirefox = typeof InstallTrigger !== 'undefined';
+
+        if (!isChrome && !isFirefox) {
+            window.alert("Die Applikation wird eventuell nicht von ihrem Browser unterstützt.\nFür die beste User-Experience benutzen Sie bitte entweder Google Chrome oder Mozilla Firefox.");
         }
     </script>
 
