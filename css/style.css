@@ -5,7 +5,13 @@ body, h1, h2, h3, h4, h5, h6 {
 body, html {
     height: 100%;
     line-height: 1.8;
+    overflow-y: scroll;
 }
+
+/*
+*   For the kbd-tags I just the styling by stackoverflow
+*   https://meta.stackoverflow.com/questions/382481/how-do-i-format-an-arrow-key-input
+*/
 
 kbd {
     display: inline-block;
@@ -48,6 +54,9 @@ kbd {
 
 .webgl-content {
     /*
+    *   Original Settings
+    */
+    /*
     position: relative;
     top: 50%;
     left: 50%;
@@ -68,9 +77,23 @@ kbd {
     padding-bottom: 62.5%;
 }
 
+#dwldButton {
+    display: none;
+    position: sticky; 
+    bottom: 0;
+    /*
+    *   The following is a little hack, in order to get imposed padding of parent class (w3-row-padding).
+    *   Goal here is the button to be full width.
+    *   Hack found at https://stackoverflow.com/questions/4296530/ignore-parent-padding
+    */
+    margin-left: -8px;
+    width: calc(100% + 16px);
+}
+
 #unityContainer {
     /*
     * Width and height (aspect-) ratio is being expressed in .webgl-content:before
+    * Below is for documentation-reasons the original ratio.
 
     width: 960px; 
     height: 600px;
@@ -80,6 +103,10 @@ kbd {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+#imprint {
+    padding:40px 20% 40px 20%;
 }
 
 .webgl-content .logo, .progress {
