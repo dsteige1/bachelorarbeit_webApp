@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="de">
-<title>Domkrypta Virtuell</title>
+<title>Speyerer Domkrypta | Virtuell</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="style/style.css">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="TemplateData/UnityProgress.js"></script>
 <script src="Build/UnityLoader.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="scripts/ajaxLoader.js"></script>
 <script src="scripts/getObjInfo.js"></script>
 <script src="scripts/anchorCall.js"></script>
 <script src="scripts/download.js"></script>
+<script src="scripts/styler.js"></script>
 <script>
-    var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Crypt_TestBuild_01-21.json", { onProgress: UnityProgress });
+    var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Crypt_TestBuild_01-24.json", { onProgress: UnityProgress });
 </script>
 
 <body>
@@ -47,7 +48,7 @@
         <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close
             ×</a>
         <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-        <a href="#anleitung" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+        <a href="#anleitung" onclick="w3_close()" class="w3-bar-item w3-button">ANLEITUNG</a>
         <a href="#app" onclick="w3_close()" class="w3-bar-item w3-button">ZUR KRYPTA</a>
         <a href="#imprint" onclick="w3_close()" class="w3-bar-item w3-button">IMPRESSUM</a>
     </nav>
@@ -120,13 +121,17 @@
                 </div>
             </div>
         </div>
-        <div class="w3-col m3 w3-card w3-content" id="ContentContainer" style="max-height: 350px; overflow: auto;">
-            <!--<div class="w3-container">-->
+        <div class="w3-col m3 w3-card-4 w3-content w3-light-gray" id="ContentContainer">
+
+                <div class="w3-padding">
             <h3 id="infoTitle"></h3>
-            <p id="infoContent">Um Informationen zu erhalten, betätigen Sie die <kbd>Space</kbd>-Taste und klicken Sie
-                auf ein Objekt.</p>
-            <!--</div>-->
-            <button class="w3-button w3-block w3-light-grey" id="dwldButton">Download Text</button>
+            <p id="infoContent">
+                Um Informationen zu erhalten, betätigen Sie die <kbd>Space</kbd>-Taste und klicken Sie
+                auf ein Objekt.
+            </p>
+        </div>
+
+            <button class="w3-button w3-block w3-dark-gray" id="dwldButton">Download Text</button>
         </div>
     </div>
 
@@ -137,7 +142,8 @@
             <p>
                 Alle audio-visuellen Inhalte entstammen dem Projekt und wurden daher von mir persönlich
                 erstellt.<br>
-                Die Ausnahme bilden die inhaltlichen Texte, sowie Bild-Inhalte, die in dem Projekt verbaut wurden. Diese sind freundlicherweise
+                Die Ausnahme bilden die inhaltlichen Texte, sowie Bild-Inhalte, die in dem Projekt verbaut wurden. Diese
+                sind freundlicherweise
                 vom <a href="http://www.pilger-speyer.de/">Peregrinus-Verlag</a> zur Verfügung gestellt worden und unter
                 Genehmigung dessen implementiert.
             </p>
@@ -187,32 +193,9 @@
     </footer>
 
     <script>
-        // Toggle between showing and hiding the sidebar when clicking the menu icon
-        var mySidebar = document.getElementById("mySidebar");
-
-        function w3_open() {
-            if (mySidebar.style.display === 'block') {
-                mySidebar.style.display = 'none';
-            } else {
-                mySidebar.style.display = 'block';
-            }
-        }
-
-        // Close the sidebar with the close button
-        function w3_close() {
-            mySidebar.style.display = "none";
-        }
     </script>
     <script>
-        //Detect Browsers, in order give alert if Browser is compatible with the App
-        var isChrome = window.chrome;
-        var isFirefox = typeof InstallTrigger !== 'undefined';
-
-        if (!isChrome && !isFirefox) {
-            window.alert("Lieber User,\ndie Applikation wird eventuell nicht von deinem Browser unterstützt.\nFür die beste User-Experience benutze daher bitte entweder Google Chrome oder Mozilla Firefox.\n D.S.");
-        }
     </script>
-
 </body>
 
 </html>
