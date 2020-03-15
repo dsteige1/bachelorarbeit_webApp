@@ -1,5 +1,5 @@
 
-# Herzlich Willkommen
+# Bachelorprojekt | Web-App
 
 Diese One-Page-Web-Applikation wurde im Rahmen meiner Bachelorarbeit erstellt. 
 Es fasst alle Teile dieses Projekts zusammen und stellt das fertige Produkt dar.

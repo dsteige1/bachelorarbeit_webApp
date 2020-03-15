@@ -23,9 +23,9 @@ $(document).ready(function () {
  */
 
 // Toggle between showing and hiding the sidebar when clicking the menu icon (W3.css Template)
-var mySidebar = document.getElementById("mySidebar");
 
 function w3_open() {
+    var mySidebar = document.getElementById("mySidebar");
     if (mySidebar.style.display === 'block') {
         mySidebar.style.display = 'none';
     } else {
@@ -35,5 +35,6 @@ function w3_open() {
 
 // Close the sidebar with the close button (W3.css Template)
 function w3_close() {
+    var mySidebar = document.getElementById("mySidebar");
     mySidebar.style.display = "none";
 }

@@ -109,8 +109,24 @@ kbd {
     width: calc(100% + 16px);
 }
 
+#about{
+    padding: 80px 20% 64px 20%;
+}
+
+@media only screen and (max-width: 600px) {
+    #about {
+        padding: 30px 5% 32px 5%;
+    }
+}
+
 #imprint {
     padding:40px 20% 40px 20%;
+}
+
+@media only screen and (max-width: 600px) {
+    #imprint {
+        padding: 30px 5% 32px 5%;
+    }
 }
 
 .webgl-content .logo, .progress {
