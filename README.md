@@ -40,7 +40,10 @@ Es fasst alle Teile dieses Projekts zusammen und stellt das fertige Produkt dar.
 - UnityProgress.js und UnityLoader.js
 	- Diese beiden Skripte entstammen dem Unity / WebGl-Build und wurden von mir nicht berührt
 ## Starten
-Zum lokalen Aufrufen empfiehlt wird ein lokaler Server benötigt.
+Am besten funktionert die Web-Applikation in **Chrome** oder **Firefox**, da Browser wie z.B. Safari die transpilierten Scripts teilweise nicht korrekt interpretieren.
+
+Zum lokalen Aufrufen wird ein lokaler Server benötigt.
+
 Der npm live-server reicht vollkommen aus:
 
     $ npm install live-server

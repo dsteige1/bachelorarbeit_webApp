@@ -3,7 +3,7 @@ var isChrome = window.chrome;
 var isFirefox = typeof InstallTrigger !== 'undefined';
 
 if (!isChrome && !isFirefox) {
-    window.alert("Lieber User,\ndie Applikation wird eventuell nicht von deinem Browser unterstützt.\nFür die beste User-Experience benutze daher bitte entweder Google Chrome oder Mozilla Firefox.\n D.S.");
+    window.alert("Liebe/r UserIn,\ndie Applikation wird eventuell nicht von deinem Browser unterstützt.\nFür die beste User-Experience benutze daher bitte entweder Google Chrome oder Mozilla Firefox.");
 }
 
 //  Set the maxHeight of content-card equal to the 'game'-window
